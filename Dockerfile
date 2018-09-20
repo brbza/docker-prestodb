@@ -1,7 +1,7 @@
 FROM bde2020/hadoop-base:1.1.0-hadoop2.8-java8
-MAINTAINER kzhu
+MAINTAINER brbza
 
-ENV PRESTO_VERSION=0.193
+ENV PRESTO_VERSION=0.206
 ENV PRESTO_HOME=/opt/presto
 
 RUN curl -L https://repo1.maven.org/maven2/com/facebook/presto/presto-server/${PRESTO_VERSION}/presto-server-${PRESTO_VERSION}.tar.gz -o /tmp/presto-server.tgz && \
@@ -11,7 +11,7 @@ RUN curl -L https://repo1.maven.org/maven2/com/facebook/presto/presto-server/${P
     rm -f /tmp/presto-server.tgz
 
 COPY etc ${PRESTO_HOME}/etc
-EXPOSE 8080
+EXPOSE 8889
 
 VOLUME ["${PRESTO_HOME}/etc", "${PRESTO_HOME}/data"]
 

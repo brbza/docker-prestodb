@@ -1,7 +1,7 @@
 require 'serverspec'
 require 'docker'
 
-describe 'shawnzhu/prestodb' do
+describe 'brbza/prestodb' do
   before(:all) do
     image = Docker::Image.build_from_dir('.')
 
@@ -9,7 +9,7 @@ describe 'shawnzhu/prestodb' do
     set :docker_image, image.id
   end
 
-  describe file('/opt/presto-server-0.193') do
+  describe file('/opt/presto-server-0.206') do
     it { should be_directory }
   end
 
