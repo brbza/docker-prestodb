@@ -10,7 +10,7 @@ It requires a working Hive cluster since the default configuration files are for
 ## Start
 
 ```SHELL
-docker run -d -p 8889:8889 brbza/prestodb:0.206
+docker run -d -p 8889:8889 brbza/prestodb:0.214
 ``` 
 
 ## Customize
@@ -18,6 +18,6 @@ docker run -d -p 8889:8889 brbza/prestodb:0.206
 It's capable to change configuration like `hive.metastore.uri` by binding new directory under `/opt/presto/etc`. E.g., given configuration file `/foo/bar/hive.properties`:
 
 ```SHELL
-docker run -d -p 8889:8889 -v /foo/bar/hive.properties:/opt/presto/etc/catalog/hive.properties:ro brbza/prestodb:0.206
+docker run -d -p 8889:8889 -v /foo/bar/hive.properties:/opt/presto/etc/catalog/hive.properties:ro brbza/prestodb:0.214
 ``` 
 

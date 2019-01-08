@@ -9,7 +9,7 @@ describe 'brbza/prestodb' do
     set :docker_image, image.id
   end
 
-  describe file('/opt/presto-server-0.206') do
+  describe file('/opt/presto-server-0.214') do
     it { should be_directory }
   end
 

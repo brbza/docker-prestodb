@@ -1,7 +1,7 @@
 FROM bde2020/hadoop-base:1.1.0-hadoop2.8-java8
 MAINTAINER brbza
 
-ENV PRESTO_VERSION=0.206
+ENV PRESTO_VERSION=0.214
 ENV PRESTO_HOME=/opt/presto
 
 RUN curl -L https://repo1.maven.org/maven2/com/facebook/presto/presto-server/${PRESTO_VERSION}/presto-server-${PRESTO_VERSION}.tar.gz -o /tmp/presto-server.tgz && \
