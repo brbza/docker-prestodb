@@ -1,4 +1,4 @@
-FROM bde2020/hadoop-base:1.1.0-hadoop2.8-java8
+FROM openjdk:8
 MAINTAINER brbza
 
 ENV PRESTO_VERSION=0.214
